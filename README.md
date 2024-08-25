@@ -8,6 +8,8 @@ Estructuras discretas
 
 - Manuel Sandoval Arroyo
 
+## Documentación
+
 Este archivo README documenta varias funciones de Haskell. Cada función se describe a continuación:
 
 - **Distancia entre dos puntos en el plano cartesiano:**
