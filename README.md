@@ -15,8 +15,8 @@ Este archivo README documenta varias funciones de Haskell. Cada función se desc
 - **Distancia entre dos puntos en el plano cartesiano:**
 
   ```haskell
-  distancia :: (Float, Float) -> (Float, Float) -> Float
-  distancia (x_1, y_1) (x_2, y_2) = sqrt ((x_2 - x_1)^2 + (y_2 - y_1)^2)
+  distanciaPuntos :: (Float, Float) -> (Float, Float) -> Float
+  distanciaPuntos (x_1, y_1) (x_2, y_2) = sqrt ((x_2 - x_1)^2 + (y_2 - y_1)^2)
   ```
 
   Esta función calcula la distancia entre dos puntos en un plano cartesiano.
@@ -42,8 +42,8 @@ Este archivo README documenta varias funciones de Haskell. Cada función se desc
 - **Raíces de una ecuación cuadrática:**
 
   ```haskell
-  quadraticFormula :: Float -> Float -> Float -> (Float, Float)
-  quadraticFormula a b c =
+  raices :: Float -> Float -> Float -> (Float, Float)
+  raices a b c =
           let discriminant = sqrt (b^2 - 4 * a * c)
           in ((-b - discriminant)/(2*a), (-b + discriminant)/(2*a))
   ```
@@ -53,8 +53,8 @@ Este archivo README documenta varias funciones de Haskell. Cada función se desc
 - **Área de un triángulo por medio de la fórmula de Herón:**
 
   ```haskell
-  area :: Float -> Float -> Float -> Float
-  area a b c =
+  areaTriangulo :: Float -> Float -> Float -> Float
+  areaTriangulo a b c =
           let s = (a + b + c)/2
           in sqrt (s * (s - a) * (s - b) * (s - c))
   ```
@@ -64,8 +64,8 @@ Este archivo README documenta varias funciones de Haskell. Cada función se desc
 - **Función comparador:**
 
   ```haskell
-  comparar :: Int -> Int -> Int
-  comparar x y
+  comparador :: Int -> Int -> Int
+  comparador x y
       | x == y = 0
       | x < y = -1
       | otherwise = 1
