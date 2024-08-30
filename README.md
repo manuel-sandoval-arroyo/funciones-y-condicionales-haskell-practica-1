@@ -66,9 +66,9 @@ Este archivo README documenta varias funciones de Haskell. Cada función se desc
   ```haskell
   comparador :: Int -> Int -> Int
   comparador x y
-      | x == y = 0
-      | x < y = -1
-      | otherwise = 1
+      if x == then 0
+      if x < y then -1| x < y = -1
+      else 1
   ```
 
   Esta función compara dos enteros y devuelve 0 si son iguales, -1 si el primer entero es menor y 1 si el primer entero es mayor.
