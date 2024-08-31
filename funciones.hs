@@ -3,8 +3,8 @@ distanciaPuntos :: (Float, Float) -> (Float, Float) -> Float
 distanciaPuntos (x_1, y_1) (x_2, y_2) = sqrt ((x_2 - x_1)^2 + (y_2 - y_1)^2)
 
 -- 2. Hipotenusa de un triangulo rectángulo
-hipotenusa :: (Float, Float) -> Float
-hipotenusa (b, h) = sqrt (b^2 + h^2)
+hipotenusa :: Float -> Float -> Float
+hipotenusa b h = sqrt (b^2 + h^2)
 
 -- 3. Pendiente de la recta que pasa por dos puntos
 pendiente :: (Float, Float) -> (Float, Float) -> Float
@@ -13,8 +13,8 @@ pendiente (x_1, y_1) (x_2, y_2) = (y_2 - y_1)/(x_2 - x_1)
 -- 4. Raíces de una ecuación cuadrática
 raices :: Float -> Float -> Float -> (Float, Float)
 raices a b c =
-    let discriminant = sqrt (b^2 - 4 * a * c)
-    in ((-b - discriminant)/(2*a), (-b + discriminant)/(2*a))
+    let discriminante = sqrt (b^2 - 4 * a * c)
+    in ((-b - discriminante)/(2*a), (-b + discriminante)/(2*a))
 
 -- 5. Área de un triángulo por medio de la fórmula de Herón
 areaTriangulo :: Float -> Float -> Float -> Float
@@ -31,7 +31,10 @@ comparador x y =
 
 -- 7. Máximo entre tres números
 maximo :: Int -> Int -> Int -> Int
-maximo x y z = max x (max y z)
+maximo x y z = 
+  if x >= y && x >= z then x
+  else if y >= x && y >= z then y
+  else z
 
 -- 8. Números ordenados de forma descendente
 esDescendente :: Int -> Int -> Int -> Int -> Bool
